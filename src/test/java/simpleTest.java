@@ -11,7 +11,7 @@ public class simpleTest {
 
     @BeforeSuite
     public void setWebDriver(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        ////System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver.manage().window().maximize();
     }
 
@@ -20,7 +20,7 @@ public class simpleTest {
         driver.get("https://www.youtube.com/");
         wait.until(ExpectedConditions.urlToBe("https://www.youtube.com/"));
     }
-    
+
     @Test(priority = 3)
     public void checkSum(){
         Assert.assertEquals(2+3, 5);
